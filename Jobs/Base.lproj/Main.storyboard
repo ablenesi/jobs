@@ -93,11 +93,11 @@
             </objects>
             <point key="canvasLocation" x="750" y="0.0"/>
         </scene>
-        <!--View Controller-->
+        <!--Login Controller-->
         <scene sceneID="BSS-A4-fFR">
             <objects>
-                <viewController id="aoF-5f-Ap4" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="fwS-hN-GfQ">
+                <viewController id="aoF-5f-Ap4" customClass="LoginController" customModule="Jobs" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fwS-hN-GfQ" customClass="Login">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -115,15 +115,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mrD-FL-YBW">
-                                <rect key="frame" x="107" y="577" width="161" height="30"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u0u-0v-bFL" customClass="GIDSignInButton">
+                                <rect key="frame" x="67" y="591" width="240" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="LOGIN WITH GOOGLE"/>
-                            </button>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="login:" destination="aoF-5f-Ap4" eventType="touchUpInside" id="Ugs-zn-xSh"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="u2n-qa-gLP"/>
                     </view>
+                    <connections>
+                        <segue destination="49e-Tb-3d3" kind="show" identifier="login" id="x2T-rh-aHh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nWS-As-Ccr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

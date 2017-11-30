@@ -17,6 +17,10 @@
 		52A7CCB91FB9F855000C65E4 /* JobsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A7CCB81FB9F855000C65E4 /* JobsTests.swift */; };
 		52A7CCC41FB9F855000C65E4 /* JobsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A7CCC31FB9F855000C65E4 /* JobsUITests.swift */; };
 		52A7CCD21FB9FF34000C65E4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52A7CCD11FB9FF34000C65E4 /* GoogleService-Info.plist */; };
+		52C3C4801FC3301F007DF5A5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C3C47F1FC3301F007DF5A5 /* User.swift */; };
+		52C3C4821FC332F8007DF5A5 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C3C4811FC332F8007DF5A5 /* Job.swift */; };
+		52C3C4841FC337A2007DF5A5 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C3C4831FC337A2007DF5A5 /* Application.swift */; };
+		52C3C4861FC33BE8007DF5A5 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C3C4851FC33BE8007DF5A5 /* LoginController.swift */; };
 		7F17A020B390B84AFCFDF847 /* Pods_Jobs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 503E68B1BD2F2D2FB8356EA6 /* Pods_Jobs.framework */; };
 		F01679FE0E926AC6CB7011D9 /* Pods_JobsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4804B51661032C5FC44ECCEF /* Pods_JobsTests.framework */; };
 /* End PBXBuildFile section */
@@ -57,6 +61,10 @@
 		52A7CCC31FB9F855000C65E4 /* JobsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsUITests.swift; sourceTree = "<group>"; };
 		52A7CCC51FB9F855000C65E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52A7CCD11FB9FF34000C65E4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		52C3C47F1FC3301F007DF5A5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		52C3C4811FC332F8007DF5A5 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
+		52C3C4831FC337A2007DF5A5 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		52C3C4851FC33BE8007DF5A5 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		77FE585C0317176EE9A3529D /* Pods-JobsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JobsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JobsTests/Pods-JobsTests.release.xcconfig"; sourceTree = "<group>"; };
 		84EFA2E36E2DD13764F35173 /* Pods-Jobs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jobs.release.xcconfig"; path = "Pods/Target Support Files/Pods-Jobs/Pods-Jobs.release.xcconfig"; sourceTree = "<group>"; };
 		B3EDD7D3287661EF73A160B6 /* Pods-JobsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JobsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JobsTests/Pods-JobsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +134,10 @@
 				52A7CCAA1FB9F855000C65E4 /* Assets.xcassets */,
 				52A7CCAC1FB9F855000C65E4 /* LaunchScreen.storyboard */,
 				52A7CCAF1FB9F855000C65E4 /* Info.plist */,
+				52C3C47F1FC3301F007DF5A5 /* User.swift */,
+				52C3C4811FC332F8007DF5A5 /* Job.swift */,
+				52C3C4831FC337A2007DF5A5 /* Application.swift */,
+				52C3C4851FC33BE8007DF5A5 /* LoginController.swift */,
 			);
 			path = Jobs;
 			sourceTree = "<group>";
@@ -318,11 +330,17 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Jobs/Pods-Jobs-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -449,9 +467,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Jobs/Pods-Jobs-resources.sh",
+				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseAuthUI.bundle,
+				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseGoogleAuthUI.bundle,
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -465,9 +488,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52C3C4841FC337A2007DF5A5 /* Application.swift in Sources */,
+				52C3C4801FC3301F007DF5A5 /* User.swift in Sources */,
 				52A7CCA61FB9F855000C65E4 /* SecondViewController.swift in Sources */,
 				52A7CCA21FB9F855000C65E4 /* AppDelegate.swift in Sources */,
 				52A7CCA41FB9F855000C65E4 /* FirstViewController.swift in Sources */,
+				52C3C4821FC332F8007DF5A5 /* Job.swift in Sources */,
+				52C3C4861FC33BE8007DF5A5 /* LoginController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
