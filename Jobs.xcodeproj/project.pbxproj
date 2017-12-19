@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		26C6C3649FDBA57416E59880 /* Pods_JobsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 101216836C971A4EA8D2B9D5 /* Pods_JobsUITests.framework */; };
+		521E86B61FE8288B00855D34 /* GoogleSignInService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521E86B51FE8288B00855D34 /* GoogleSignInService.swift */; };
+		521E86B91FE82D0500855D34 /* NSNotification.Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521E86B81FE82D0500855D34 /* NSNotification.Name.swift */; };
 		52A7CCA21FB9F855000C65E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A7CCA11FB9F855000C65E4 /* AppDelegate.swift */; };
 		52A7CCA41FB9F855000C65E4 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A7CCA31FB9F855000C65E4 /* FirstViewController.swift */; };
 		52A7CCA61FB9F855000C65E4 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A7CCA51FB9F855000C65E4 /* SecondViewController.swift */; };
@@ -17,6 +19,8 @@
 		52A7CCB91FB9F855000C65E4 /* JobsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A7CCB81FB9F855000C65E4 /* JobsTests.swift */; };
 		52A7CCC41FB9F855000C65E4 /* JobsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A7CCC31FB9F855000C65E4 /* JobsUITests.swift */; };
 		52A7CCD21FB9FF34000C65E4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52A7CCD11FB9FF34000C65E4 /* GoogleService-Info.plist */; };
+		52ADD3F11FE9B39D002B8840 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ADD3F01FE9B39D002B8840 /* KeychainManager.swift */; };
+		52ADD3F31FE9B7E2002B8840 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ADD3F21FE9B7E2002B8840 /* CurrentUser.swift */; };
 		52C3C4801FC3301F007DF5A5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C3C47F1FC3301F007DF5A5 /* User.swift */; };
 		52C3C4821FC332F8007DF5A5 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C3C4811FC332F8007DF5A5 /* Job.swift */; };
 		52C3C4841FC337A2007DF5A5 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C3C4831FC337A2007DF5A5 /* Application.swift */; };
@@ -46,6 +50,8 @@
 		101216836C971A4EA8D2B9D5 /* Pods_JobsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JobsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4804B51661032C5FC44ECCEF /* Pods_JobsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JobsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		503E68B1BD2F2D2FB8356EA6 /* Pods_Jobs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jobs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		521E86B51FE8288B00855D34 /* GoogleSignInService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInService.swift; sourceTree = "<group>"; };
+		521E86B81FE82D0500855D34 /* NSNotification.Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotification.Name.swift; sourceTree = "<group>"; };
 		52A7CC9E1FB9F855000C65E4 /* Jobs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jobs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52A7CCA11FB9F855000C65E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52A7CCA31FB9F855000C65E4 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +67,8 @@
 		52A7CCC31FB9F855000C65E4 /* JobsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsUITests.swift; sourceTree = "<group>"; };
 		52A7CCC51FB9F855000C65E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52A7CCD11FB9FF34000C65E4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		52ADD3F01FE9B39D002B8840 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		52ADD3F21FE9B7E2002B8840 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		52C3C47F1FC3301F007DF5A5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		52C3C4811FC332F8007DF5A5 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 		52C3C4831FC337A2007DF5A5 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
@@ -101,6 +109,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		521E86B41FE8287100855D34 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				521E86B51FE8288B00855D34 /* GoogleSignInService.swift */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		521E86B71FE82CD500855D34 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				521E86B81FE82D0500855D34 /* NSNotification.Name.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		529017531FD59FF800491227 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				52C3C47F1FC3301F007DF5A5 /* User.swift */,
+				52C3C4811FC332F8007DF5A5 /* Job.swift */,
+				52C3C4831FC337A2007DF5A5 /* Application.swift */,
+				52ADD3F21FE9B7E2002B8840 /* CurrentUser.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		52A7CC951FB9F855000C65E4 = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +161,11 @@
 		52A7CCA01FB9F855000C65E4 /* Jobs */ = {
 			isa = PBXGroup;
 			children = (
+				52ADD3F41FE9BCA8002B8840 /* Scenes */,
+				52ADD3EE1FE9B369002B8840 /* Data Access */,
+				521E86B71FE82CD500855D34 /* Constants */,
+				521E86B41FE8287100855D34 /* Logic */,
+				529017531FD59FF800491227 /* Models */,
 				52A7CCD11FB9FF34000C65E4 /* GoogleService-Info.plist */,
 				52A7CCA11FB9F855000C65E4 /* AppDelegate.swift */,
 				52A7CCA31FB9F855000C65E4 /* FirstViewController.swift */,
@@ -134,10 +174,6 @@
 				52A7CCAA1FB9F855000C65E4 /* Assets.xcassets */,
 				52A7CCAC1FB9F855000C65E4 /* LaunchScreen.storyboard */,
 				52A7CCAF1FB9F855000C65E4 /* Info.plist */,
-				52C3C47F1FC3301F007DF5A5 /* User.swift */,
-				52C3C4811FC332F8007DF5A5 /* Job.swift */,
-				52C3C4831FC337A2007DF5A5 /* Application.swift */,
-				52C3C4851FC33BE8007DF5A5 /* LoginController.swift */,
 			);
 			path = Jobs;
 			sourceTree = "<group>";
@@ -158,6 +194,30 @@
 				52A7CCC51FB9F855000C65E4 /* Info.plist */,
 			);
 			path = JobsUITests;
+			sourceTree = "<group>";
+		};
+		52ADD3EE1FE9B369002B8840 /* Data Access */ = {
+			isa = PBXGroup;
+			children = (
+				52ADD3EF1FE9B37D002B8840 /* Persistence */,
+			);
+			path = "Data Access";
+			sourceTree = "<group>";
+		};
+		52ADD3EF1FE9B37D002B8840 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				52ADD3F01FE9B39D002B8840 /* KeychainManager.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		52ADD3F41FE9BCA8002B8840 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				52C3C4851FC33BE8007DF5A5 /* LoginController.swift */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		93927F43E58AA9A79B0AE4AB /* Frameworks */ = {
@@ -333,6 +393,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -340,6 +401,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -490,11 +552,15 @@
 			files = (
 				52C3C4841FC337A2007DF5A5 /* Application.swift in Sources */,
 				52C3C4801FC3301F007DF5A5 /* User.swift in Sources */,
+				52ADD3F31FE9B7E2002B8840 /* CurrentUser.swift in Sources */,
+				521E86B61FE8288B00855D34 /* GoogleSignInService.swift in Sources */,
 				52A7CCA61FB9F855000C65E4 /* SecondViewController.swift in Sources */,
+				521E86B91FE82D0500855D34 /* NSNotification.Name.swift in Sources */,
 				52A7CCA21FB9F855000C65E4 /* AppDelegate.swift in Sources */,
 				52A7CCA41FB9F855000C65E4 /* FirstViewController.swift in Sources */,
 				52C3C4821FC332F8007DF5A5 /* Job.swift in Sources */,
 				52C3C4861FC33BE8007DF5A5 /* LoginController.swift in Sources */,
+				52ADD3F11FE9B39D002B8840 /* KeychainManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

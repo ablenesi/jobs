@@ -11,70 +11,91 @@ import Firebase
 import GoogleSignIn
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
+
+class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-        // ...
-        if let error = error {
-            // ...
-            return
-        }
-        
-        guard let authentication = user.authentication else { return }
-        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
-                                                       accessToken: authentication.accessToken)
-        // ...
-    }
-
     var window: UIWindow?
-
+    private let googleSignInService = GoogleSignInService()
+    fileprivate var authentication: GIDAuthentication?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
         
-        // Use Firebase library to configure APIs
+        // Setup Firebase
         FirebaseApp.configure()
         
-        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
-        GIDSignIn.sharedInstance().delegate = self
+        // Setup Google Login
+        googleSignInService.delegate = self
+        googleSignInService.signIn()
+        
         return true
     }
-    @available(iOS 9.0, *)
-    func application(_ application: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any])
-        -> Bool {
-            return GIDSignIn.sharedInstance().handle(url,
-                                                     sourceApplication:options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String,
-                                                     annotation: [:])
-    }
-}
-func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-    return GIDSignIn.sharedInstance().handle(url,
-                                             sourceApplication: sourceApplication,
-                                             annotation: annotation)
     
-
-    func applicationWillResignActive(_ application: UIApplication) {
-        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
+    @available(iOS 9.0, *)
+    func application(_ application: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
+        return self.application(application, open: url, sourceApplication:options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String, annotation: [:])
     }
-
-    func applicationDidEnterBackground(_ application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        return GIDSignIn.sharedInstance().handle(url, sourceApplication: sourceApplication,annotation: annotation)
     }
-
-    func applicationWillEnterForeground(_ application: UIApplication) {
-        // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+    
+    fileprivate func signInToFirebase() {
+        guard let authentication = authentication else {
+            NotificationCenter.default.post(name: .didFailSigningIn, object: nil)
+            return
+        }
+        let credentials = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
+        Auth.auth().signIn(with: credentials, completion: { (user, error) in
+            if error != nil {
+                NotificationCenter.default.post(name: .didFailSigningIn, object: nil)
+            } else {
+                if let user = user {
+                    guard let displayName = user.displayName, let email = user.email, let photoURL = user.photoURL else {
+                        NotificationCenter.default.post(name: .didFailSigningIn, object: nil)
+                        return
+                    }
+                    let currentUser = CurrentUser(name: displayName, email: email, profileImageUrl: photoURL)
+                    KeychainManager.shared.user = currentUser
+                    KeychainManager.shared.authToken = authentication.accessToken
+                    user.getIDTokenForcingRefresh(true, completion: { authToken, error in
+                        if error != nil {
+                            NotificationCenter.default.post(name: .didFailSigningIn, object: nil)
+                        } else {
+                            guard let authToken = authToken else { return }
+                            KeychainManager.shared.authToken = authToken
+                            NotificationCenter.default.post(name: .didFinishSigningIn, object: nil)
+                        }
+                    })
+                }
+            }
+        })
     }
-
-    func applicationDidBecomeActive(_ application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    
+    func signOut() {
+        googleSignInService.signOut()
+        KeychainManager.shared.authToken = nil
+        
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+            DispatchQueue.main.async {
+                NotificationCenter.default.post(name: .didLogOut, object: nil)
+            }
+        } catch {
+            print ("Error signing out: %@", error)
+        }
     }
-
-    func applicationWillTerminate(_ application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    }
-
-
 }
 
+// MARK: - Extension
+extension AppDelegate: GoogleSignInDelegate {
+    func didFinishGoogleSignIn(_ authentication: GIDAuthentication) {
+        NotificationCenter.default.post(name: .didFinishGoogleSignIn, object: nil)
+        self.authentication = authentication
+        signInToFirebase()
+    }
+    
+    func didFaildGoogleSignIn() {
+        NotificationCenter.default.post(name: .didFailSigningIn, object: nil)
+    }
+}
