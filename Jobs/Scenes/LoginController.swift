@@ -28,6 +28,12 @@ class LoginController: UIViewController {
         signUpForNotifications()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        if(KeychainManager.shared.user != nil){
+            didFinishSigningIn()
+        }
+    }
+    
     // MARK: - Notifications
     private func signUpForNotifications() {
         NotificationCenter.default.addObserver(self, selector: #selector(didFinishSigningIn), name: .didFinishSigningIn, object: nil)

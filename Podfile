@@ -9,7 +9,8 @@ target 'Jobs' do
   pod 'Firebase/Core'
   pod 'FirebaseUI/Google'
   pod 'KeychainSwift', '~> 10.0'
-
+  pod 'Kingfisher', '~> 4.0'
+  
   target 'JobsTests' do
     inherit! :search_paths
     # Pods for testing
