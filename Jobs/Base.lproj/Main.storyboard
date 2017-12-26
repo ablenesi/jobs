@@ -23,7 +23,7 @@
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="separatorInset" minX="68" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="JobItem" rowHeight="68" id="HB0-Bg-xdV">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="JobItem" rowHeight="68" id="HB0-Bg-xdV" customClass="JobTableViewCell" customModule="Jobs" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="68"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" layoutMarginsFollowReadableWidth="YES" tableViewCell="HB0-Bg-xdV" id="x26-Xv-0ad">
@@ -57,6 +57,12 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="company" destination="Ezb-Lo-gPd" id="z6j-c5-D6E"/>
+                                            <outlet property="createdAt" destination="MLR-YR-cl0" id="enJ-F9-VkG"/>
+                                            <outlet property="logo" destination="pBk-Hu-PNY" id="YaQ-tS-CHK"/>
+                                            <outlet property="title" destination="Y6J-xC-qM6" id="BHE-Dq-hob"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -70,7 +76,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Z4y-yR-XqG"/>
                     <connections>
-                        <outlet property="view" destination="cci-u1-WuL" id="fmj-tC-d2j"/>
+                        <outlet property="view" destination="cci-u1-WuL" id="l8i-AW-Var"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>

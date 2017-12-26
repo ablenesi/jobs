@@ -49,8 +49,8 @@ class JoSearchViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "JobItem") as! UITableViewCell
-        configureCell(cell: cell, item: items[indexPath.row])
+        let cell = tableView.dequeueReusableCell(withIdentifier: "JobItem") as! JobTableViewCell
+        cell.populate(job: items[indexPath.row])
         return cell
     }
     
@@ -68,6 +68,27 @@ class JoSearchViewController: UITableViewController {
         let logo = cell.viewWithTag(4) as! UIImageView
         let url = URL(string: "https://pbs.twimg.com/profile_images/634354508060053504/KxAuF-UE_400x400.jpg")
         logo.kf.setImage(with: url)
+    }
+    
+}
+
+
+class JobTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var logo: UIImageView!
+    @IBOutlet private var title: UILabel!
+    @IBOutlet weak var company: UILabel!
+    @IBOutlet weak var createdAt: UILabel!
+    
+    func populate(job: Job) {
+        
+        // Displaying data, part two
+        title.text = job.title
+        company.text = job.company
+        createdAt.text = job.createdAt.debugDescription
+        let url = URL(string: "https://pbs.twimg.com/profile_images/634354508060053504/KxAuF-UE_400x400.jpg")
+        logo.kf.setImage(with: url)
+        
     }
     
 }
