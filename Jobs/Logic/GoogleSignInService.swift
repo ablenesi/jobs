@@ -29,6 +29,7 @@ class GoogleSignInService: NSObject{
     
     func signOut(){
         GIDSignIn.sharedInstance().signOut()
+        KeychainManager.shared.user = nil
     }
 }
 

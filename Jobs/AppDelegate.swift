@@ -50,7 +50,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 NotificationCenter.default.post(name: .didFailSigningIn, object: nil)
             } else {
                 if let user = user {
-                    guard let displayName = user.displayName, let email = user.email, let photoURL = user.photoURL else {
+                    let url = NSURLComponents(string: user.photoURL!.absoluteString)
+                    url?.queryItems = [URLQueryItem(name: "sz", value: "300")]
+                    guard let displayName = user.displayName, let email = user.email, let photoURL = url?.url else {
                         NotificationCenter.default.post(name: .didFailSigningIn, object: nil)
                         return
                     }

@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Kingfisher
 
-class JoSearchViewController: UITableViewController {
+class JobSearchViewController: UITableViewController {
     
     var items: [Job] = []
     
@@ -71,7 +71,6 @@ class JoSearchViewController: UITableViewController {
     }
     
 }
-
 
 class JobTableViewCell: UITableViewCell {
     

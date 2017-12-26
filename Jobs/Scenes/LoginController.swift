@@ -42,9 +42,7 @@ class LoginController: UIViewController {
     }
     
     @objc private func didFinishSigningIn() {
-        performSegue(withIdentifier: "login", sender: signInButton)
-        //let preferenceVC = FirstViewController()
-        //navigationController?.pushViewController(preferenceVC, animated: true)
+        performSegue(withIdentifier: "login", sender: signInButton)        
     }
     
     @objc private func didFailSigningIn() {

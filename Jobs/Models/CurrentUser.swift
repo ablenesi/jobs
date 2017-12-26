@@ -10,9 +10,9 @@ import Foundation
 
 class CurrentUser: Codable {
     
-    var name: String
-    var email: String
-    var profileImageUrl: URL
+    public var name: String
+    public var email: String
+    public var profileImageUrl: URL
     
     init(name: String, email: String, profileImageUrl: URL) {
         self.name = name
