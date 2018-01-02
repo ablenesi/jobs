@@ -25,12 +25,17 @@ class LoginController: UIViewController {
         activityIndicator.hidesWhenStopped = true
         activityIndicator.stopAnimating()
         
+        
+        signInButton.isHidden = true
+        
         signUpForNotifications()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         if(KeychainManager.shared.user != nil){
             didFinishSigningIn()
+        } else {
+            signInButton.isHidden = false
         }
     }
     
