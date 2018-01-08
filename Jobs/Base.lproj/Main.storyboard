@@ -77,7 +77,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Z4y-yR-XqG"/>
                     <connections>
-                        <outlet property="view" destination="cci-u1-WuL" id="XZq-mP-nMq"/>
+                        <outlet property="view" destination="cci-u1-WuL" id="t5J-M0-XUO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>

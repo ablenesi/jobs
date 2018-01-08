@@ -25,7 +25,6 @@ class LoginController: UIViewController {
         activityIndicator.hidesWhenStopped = true
         activityIndicator.stopAnimating()
         
-        
         signInButton.isHidden = true
         
         signUpForNotifications()
