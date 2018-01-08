@@ -46,7 +46,7 @@ class LoginController: UIViewController {
     }
     
     @objc private func didFinishSigningIn() {
-        performSegue(withIdentifier: "login", sender: signInButton)        
+        performSegue(withIdentifier: "login_hr", sender: signInButton)        
     }
     
     @objc private func didFailSigningIn() {

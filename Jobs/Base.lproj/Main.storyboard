@@ -180,6 +180,7 @@
                         <outlet property="activityIndicator" destination="cyp-tE-z46" id="6jK-Un-vgm"/>
                         <outlet property="signInButton" destination="u0u-0v-bFL" id="dVF-xK-gvQ"/>
                         <segue destination="49e-Tb-3d3" kind="show" identifier="login" id="9iw-Td-7LM"/>
+                        <segue destination="ozx-Cz-ghc" kind="show" identifier="login_hr" id="irR-kG-Yqf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nWS-As-Ccr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -274,6 +275,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aPG-7V-lrf" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="679.80295566502468"/>
+        </scene>
+        <!--hr-->
+        <scene sceneID="2n7-C3-vAY">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="HR" storyboardName="hr" id="ozx-Cz-ghc" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F74-2W-j8V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-39" y="1291"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Z36-ET-545">

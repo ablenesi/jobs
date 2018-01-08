@@ -11,6 +11,7 @@
 		521E86B61FE8288B00855D34 /* GoogleSignInService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521E86B51FE8288B00855D34 /* GoogleSignInService.swift */; };
 		521E86B91FE82D0500855D34 /* NSNotification.Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521E86B81FE82D0500855D34 /* NSNotification.Name.swift */; };
 		522873351FEDA1B600A83401 /* JobSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522873341FEDA1B600A83401 /* JobSearchViewController.swift */; };
+		527E7E1D2003D76900B44C29 /* hr.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 527E7E1C2003D76900B44C29 /* hr.storyboard */; };
 		52A7CCA21FB9F855000C65E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A7CCA11FB9F855000C65E4 /* AppDelegate.swift */; };
 		52A7CCA41FB9F855000C65E4 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A7CCA31FB9F855000C65E4 /* FirstViewController.swift */; };
 		52A7CCA61FB9F855000C65E4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A7CCA51FB9F855000C65E4 /* ProfileViewController.swift */; };
@@ -54,6 +55,7 @@
 		521E86B51FE8288B00855D34 /* GoogleSignInService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInService.swift; sourceTree = "<group>"; };
 		521E86B81FE82D0500855D34 /* NSNotification.Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotification.Name.swift; sourceTree = "<group>"; };
 		522873341FEDA1B600A83401 /* JobSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobSearchViewController.swift; sourceTree = "<group>"; };
+		527E7E1C2003D76900B44C29 /* hr.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = hr.storyboard; sourceTree = "<group>"; };
 		52A7CC9E1FB9F855000C65E4 /* Jobs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jobs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52A7CCA11FB9F855000C65E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52A7CCA31FB9F855000C65E4 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				52A7CCAA1FB9F855000C65E4 /* Assets.xcassets */,
 				52A7CCAC1FB9F855000C65E4 /* LaunchScreen.storyboard */,
 				52A7CCAF1FB9F855000C65E4 /* Info.plist */,
+				527E7E1C2003D76900B44C29 /* hr.storyboard */,
 			);
 			path = Jobs;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 			files = (
 				52A7CCAE1FB9F855000C65E4 /* LaunchScreen.storyboard in Resources */,
 				52A7CCD21FB9FF34000C65E4 /* GoogleService-Info.plist in Resources */,
+				527E7E1D2003D76900B44C29 /* hr.storyboard in Resources */,
 				52A7CCAB1FB9F855000C65E4 /* Assets.xcassets in Resources */,
 				52A7CCA91FB9F855000C65E4 /* Main.storyboard in Resources */,
 			);
