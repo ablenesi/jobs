@@ -20,13 +20,13 @@
 		52A7CCAE1FB9F855000C65E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52A7CCAC1FB9F855000C65E4 /* LaunchScreen.storyboard */; };
 		52A7CCB91FB9F855000C65E4 /* JobsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A7CCB81FB9F855000C65E4 /* JobsTests.swift */; };
 		52A7CCC41FB9F855000C65E4 /* JobsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A7CCC31FB9F855000C65E4 /* JobsUITests.swift */; };
-		52A7CCD21FB9FF34000C65E4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52A7CCD11FB9FF34000C65E4 /* GoogleService-Info.plist */; };
 		52ADD3F11FE9B39D002B8840 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ADD3F01FE9B39D002B8840 /* KeychainManager.swift */; };
 		52ADD3F31FE9B7E2002B8840 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ADD3F21FE9B7E2002B8840 /* CurrentUser.swift */; };
 		52C3C4801FC3301F007DF5A5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C3C47F1FC3301F007DF5A5 /* User.swift */; };
 		52C3C4821FC332F8007DF5A5 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C3C4811FC332F8007DF5A5 /* Job.swift */; };
 		52C3C4841FC337A2007DF5A5 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C3C4831FC337A2007DF5A5 /* Application.swift */; };
 		52C3C4861FC33BE8007DF5A5 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C3C4851FC33BE8007DF5A5 /* LoginController.swift */; };
+		6BA3E3E42003DD1E00DF215B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BA3E3E32003DD1E00DF215B /* GoogleService-Info.plist */; };
 		7F17A020B390B84AFCFDF847 /* Pods_Jobs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 503E68B1BD2F2D2FB8356EA6 /* Pods_Jobs.framework */; };
 		F01679FE0E926AC6CB7011D9 /* Pods_JobsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4804B51661032C5FC44ECCEF /* Pods_JobsTests.framework */; };
 /* End PBXBuildFile section */
@@ -70,13 +70,13 @@
 		52A7CCBF1FB9F855000C65E4 /* JobsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JobsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52A7CCC31FB9F855000C65E4 /* JobsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsUITests.swift; sourceTree = "<group>"; };
 		52A7CCC51FB9F855000C65E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		52A7CCD11FB9FF34000C65E4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		52ADD3F01FE9B39D002B8840 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		52ADD3F21FE9B7E2002B8840 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		52C3C47F1FC3301F007DF5A5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		52C3C4811FC332F8007DF5A5 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 		52C3C4831FC337A2007DF5A5 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		52C3C4851FC33BE8007DF5A5 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		6BA3E3E32003DD1E00DF215B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Jobs/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		77FE585C0317176EE9A3529D /* Pods-JobsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JobsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JobsTests/Pods-JobsTests.release.xcconfig"; sourceTree = "<group>"; };
 		84EFA2E36E2DD13764F35173 /* Pods-Jobs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jobs.release.xcconfig"; path = "Pods/Target Support Files/Pods-Jobs/Pods-Jobs.release.xcconfig"; sourceTree = "<group>"; };
 		B3EDD7D3287661EF73A160B6 /* Pods-JobsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JobsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JobsTests/Pods-JobsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -159,6 +159,7 @@
 		52A7CC951FB9F855000C65E4 = {
 			isa = PBXGroup;
 			children = (
+				6BA3E3E32003DD1E00DF215B /* GoogleService-Info.plist */,
 				52A7CCA01FB9F855000C65E4 /* Jobs */,
 				52A7CCB71FB9F855000C65E4 /* JobsTests */,
 				52A7CCC21FB9F855000C65E4 /* JobsUITests */,
@@ -186,7 +187,6 @@
 				521E86B71FE82CD500855D34 /* Constants */,
 				521E86B41FE8287100855D34 /* Logic */,
 				529017531FD59FF800491227 /* Models */,
-				52A7CCD11FB9FF34000C65E4 /* GoogleService-Info.plist */,
 				52A7CCA11FB9F855000C65E4 /* AppDelegate.swift */,
 				52A7CCA31FB9F855000C65E4 /* FirstViewController.swift */,
 				52A7CCA71FB9F855000C65E4 /* Main.storyboard */,
@@ -382,7 +382,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52A7CCAE1FB9F855000C65E4 /* LaunchScreen.storyboard in Resources */,
-				52A7CCD21FB9FF34000C65E4 /* GoogleService-Info.plist in Resources */,
+				6BA3E3E42003DD1E00DF215B /* GoogleService-Info.plist in Resources */,
 				527E7E1D2003D76900B44C29 /* hr.storyboard in Resources */,
 				52A7CCAB1FB9F855000C65E4 /* Assets.xcassets in Resources */,
 				52A7CCA91FB9F855000C65E4 /* Main.storyboard in Resources */,
