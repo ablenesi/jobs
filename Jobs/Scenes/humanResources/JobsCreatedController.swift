@@ -11,28 +11,16 @@ import UIKit
 class JobCreatedTableViewCell: UITableViewCell {
     
     @IBOutlet weak var dateOfCreationLabel: UILabel!
-    @IBOutlet weak var jobTitelLabel: UILabel!
+    
+    @IBOutlet weak var jobTitleLabel: UILabel!
 }
 
 class JobsCreatedController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     let elements = ["e", "hh"]
+    var jobsCreatedLogic = JobsCreatedLogic()
     
     @IBOutlet weak var jobsCreatedTableView: UITableView!
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return elements.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = jobsCreatedTableView.dequeueReusableCell(withIdentifier: "JobCreatedCell", for: indexPath) as!JobCreatedTableViewCell
-        
-        cell.dateOfCreationLabel?.text = "dddd"
-        cell.jobTitelLabel?.text = "sdfsds"
-        
-        return cell
-    }
-    
-
     
     @IBOutlet weak var createNewJobButton: UIButton!
     
@@ -41,9 +29,11 @@ class JobsCreatedController: UIViewController, UITableViewDataSource, UITableVie
         
         jobsCreatedTableView.delegate = self
         jobsCreatedTableView.dataSource = self
+        
+        jobsCreatedTableView.rowHeight = 125
 
-        createNewJobButton.backgroundColor = UIColor.green
-        // Do any additional setup after loading the view.
+        createNewJobButton.backgroundColor = UIColor.blue
+        createNewJobButton.setTitleColor(.white, for: .normal)
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,4 +41,18 @@ class JobsCreatedController: UIViewController, UITableViewDataSource, UITableVie
         // Dispose of any resources that can be recreated.
     }
 
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return jobsCreatedLogic.loadCreatedJobs(company: "companyName").count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = jobsCreatedTableView.dequeueReusableCell(withIdentifier: "JobCreatedCell", for: indexPath) as!JobCreatedTableViewCell
+        
+        var jobsCreatedByCompany = jobsCreatedLogic.loadCreatedJobs(company: "companyName")
+        
+        cell.dateOfCreationLabel?.text = jobsCreatedByCompany[indexPath.row].dateOfCreation
+        cell.jobTitleLabel?.text = jobsCreatedByCompany[indexPath.row].name
+        
+        return cell
+    }
 }
