@@ -189,17 +189,30 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zGJ-Vl-wwP">
+                                <rect key="frame" x="100" y="602" width="175" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveNewJobAction:" destination="lWz-1p-YvH" eventType="touchUpInside" id="ksm-Ub-6do"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ERi-QX-n0k" firstAttribute="top" secondItem="Nvh-rO-69b" secondAttribute="top" id="7Kf-IH-cEW"/>
                             <constraint firstItem="ERi-QX-n0k" firstAttribute="trailing" secondItem="0Md-ej-RiP" secondAttribute="trailing" id="VEA-m6-6b2"/>
                             <constraint firstItem="ERi-QX-n0k" firstAttribute="leading" secondItem="0Md-ej-RiP" secondAttribute="leading" id="Zm9-np-SsR"/>
+                            <constraint firstItem="0Md-ej-RiP" firstAttribute="trailing" secondItem="zGJ-Vl-wwP" secondAttribute="trailing" constant="100" id="rxn-Sj-8Wd"/>
+                            <constraint firstItem="0Md-ej-RiP" firstAttribute="bottom" secondItem="zGJ-Vl-wwP" secondAttribute="bottom" constant="25" id="uJ2-4f-1do"/>
+                            <constraint firstItem="zGJ-Vl-wwP" firstAttribute="leading" secondItem="0Md-ej-RiP" secondAttribute="leading" constant="100" id="ug2-qN-XQm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0Md-ej-RiP"/>
                     </view>
                     <connections>
                         <outlet property="jobDescriptionTextView" destination="Xll-gF-Tx8" id="vm2-bj-ozE"/>
+                        <outlet property="jobTitleTextField" destination="E2q-rh-NBS" id="vFq-bH-qAx"/>
+                        <outlet property="saveNewJobButton" destination="zGJ-Vl-wwP" id="ADG-tZ-It7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uuV-v3-Qwe" userLabel="First Responder" sceneMemberID="firstResponder"/>
