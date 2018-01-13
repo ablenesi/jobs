@@ -15,7 +15,7 @@ class NewJobCreationController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        jobDescriptionTextView.layer.borderWidth = 1
+        jobDescriptionTextView.layer.borderWidth = 0.5
         jobDescriptionTextView.layer.borderColor = UIColor.lightGray.cgColor
 
     }

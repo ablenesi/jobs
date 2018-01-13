@@ -150,6 +150,9 @@
                                 <state key="normal" title="&lt; Jobs List">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="MDE-1o-8MJ" kind="unwind" unwindAction="didUnwindFromNewJobCreationController:" id="c3v-WI-uWW"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Job Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nmz-da-Jc6">
                                 <rect key="frame" x="16" y="148" width="108" height="32"/>
@@ -193,6 +196,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uuV-v3-Qwe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="MDE-1o-8MJ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1589.5999999999999" y="-421.43928035982015"/>
         </scene>

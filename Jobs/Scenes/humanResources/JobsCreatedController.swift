@@ -55,4 +55,7 @@ class JobsCreatedController: UIViewController, UITableViewDataSource, UITableVie
         
         return cell
     }
+    
+    @IBAction func didUnwindFromNewJobCreationController(_ sender: UIStoryboardSegue) {
+    }
 }
