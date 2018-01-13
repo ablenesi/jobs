@@ -38,18 +38,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="p4I-BF-toL">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="556"/>
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="581"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="login_bg" translatesAutoresizingMaskIntoConstraints="NO" id="CP3-9x-Obm">
+                                        <rect key="frame" x="0.0" y="0.0" width="450" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="Y9M-01-GaZ"/>
+                                            <constraint firstAttribute="width" constant="450" id="f5m-yK-Boy"/>
+                                        </constraints>
+                                    </imageView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y3E-R6-pNy">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="556"/>
+                                        <rect key="frame" x="0.0" y="25" width="450" height="556"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="JobCreatedCell" rowHeight="100" id="2Dk-Rt-tph" customClass="JobCreatedTableViewCell" customModule="Jobs" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                                <rect key="frame" x="0.0" y="28" width="450" height="100"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2Dk-Rt-tph" id="OFy-4C-WSR">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="450" height="99.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="inZ-I5-hy6">
