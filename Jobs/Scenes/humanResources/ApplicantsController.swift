@@ -49,4 +49,8 @@ class ApplicantsController: UIViewController, UITableViewDataSource, UITableView
         
         return cell
     }
+    
+    @IBAction func didUnwindFromCandidateProgressController(_ sender: UIStoryboardSegue) {
+    }
+    
 }

@@ -258,6 +258,7 @@
                                         <connections>
                                             <outlet property="candidateNameLabel" destination="VPo-QY-1al" id="VfN-6m-yLl"/>
                                             <outlet property="desiredJobLabel" destination="wby-6S-HyN" id="mUj-bK-9d6"/>
+                                            <segue destination="PXp-PQ-0wN" kind="show" id="oKj-up-cCs"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -287,6 +288,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O4U-dE-Vh7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="781.60000000000002" y="274.81259370314842"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Dh0-sp-y7d">
+            <objects>
+                <viewController id="PXp-PQ-0wN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ENb-oR-tm5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_bg" translatesAutoresizingMaskIntoConstraints="NO" id="mV9-vd-hR9">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="zIt-A1-Cbs"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ill-VG-naT">
+                                <rect key="frame" x="16" y="31" width="203" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="&lt; Candidates List">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="hsJ-VT-vXt" kind="unwind" unwindAction="didUnwindFromCandidateProgressController:" id="pU7-XP-AgK"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cand. Progress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQV-1k-vgC">
+                                <rect key="frame" x="16" y="65" width="343" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="47"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Candidate: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEb-3O-OBS">
+                                <rect key="frame" x="16" y="181" width="133" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mV9-vd-hR9" firstAttribute="top" secondItem="ENb-oR-tm5" secondAttribute="top" id="9F6-ql-UE1"/>
+                            <constraint firstItem="mV9-vd-hR9" firstAttribute="leading" secondItem="fi2-Hz-vgD" secondAttribute="leading" id="JsJ-a5-SYg"/>
+                            <constraint firstItem="mV9-vd-hR9" firstAttribute="trailing" secondItem="fi2-Hz-vgD" secondAttribute="trailing" id="On5-hx-eA0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fi2-Hz-vgD"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qG2-IW-in5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="hsJ-VT-vXt" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1586.4000000000001" y="277.51124437781112"/>
         </scene>
         <!--Profile-->
         <scene sceneID="C0o-bV-ccX">
