@@ -333,13 +333,36 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="92" id="iGs-LI-wts">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="candidateProgressMilestoneId" rowHeight="92" id="iGs-LI-wts" customClass="CandidateProgressMilestoneViewCell" customModule="Jobs" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="92"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iGs-LI-wts" id="Pke-rM-Xej">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="91.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="milestone_active" translatesAutoresizingMaskIntoConstraints="NO" id="6oG-F9-9zQ">
+                                                    <rect key="frame" x="9" y="0.0" width="132" height="91.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="125" id="1up-IX-9gw"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Milestone Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJW-w9-6Qd">
+                                                    <rect key="frame" x="154" y="26" width="221" height="40"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="6oG-F9-9zQ" secondAttribute="bottom" id="gkz-Gm-4SF"/>
+                                                <constraint firstItem="6oG-F9-9zQ" firstAttribute="top" secondItem="Pke-rM-Xej" secondAttribute="top" id="sP2-Gw-YcT"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="milestoneNameLabel" destination="oJW-w9-6Qd" id="ftb-Hv-oo8"/>
+                                            <outlet property="milestoneStateImageView" destination="6oG-F9-9zQ" id="vPT-VC-acV"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -360,6 +383,7 @@
                         <viewLayoutGuide key="safeArea" id="fi2-Hz-vgD"/>
                     </view>
                     <connections>
+                        <outlet property="candidateMilestoneTableView" destination="U8h-dg-Ibq" id="3ef-LG-8mf"/>
                         <outlet property="candidateNameLabel" destination="s8O-Mr-cOc" id="iui-1H-rFx"/>
                     </connections>
                 </viewController>
@@ -440,6 +464,7 @@
     </scenes>
     <resources>
         <image name="login_bg" width="320" height="568"/>
+        <image name="milestone_active" width="126" height="119"/>
         <image name="user_male" width="30" height="30"/>
     </resources>
 </document>
