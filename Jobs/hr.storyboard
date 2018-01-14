@@ -228,9 +228,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lsU-fh-7gj">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="591"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lsU-fh-7gj">
+                                <rect key="frame" x="0.0" y="25" width="375" height="593"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CandidateCell" rowHeight="92" id="Pg5-Bu-ez1" customClass="CandidateTableViewCell" customModule="Jobs" customModuleProvider="target">
@@ -263,8 +262,21 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="login_bg" translatesAutoresizingMaskIntoConstraints="NO" id="shc-dL-EM1">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="450" id="Chh-Wj-7BV"/>
+                                    <constraint firstAttribute="height" constant="25" id="HlF-5T-jpd"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lsU-fh-7gj" firstAttribute="top" secondItem="EAG-kC-rDI" secondAttribute="top" constant="25" id="Jdh-XG-mYx"/>
+                            <constraint firstItem="lsU-fh-7gj" firstAttribute="trailing" secondItem="qMk-At-DGx" secondAttribute="trailing" id="MaK-td-LGn"/>
+                            <constraint firstItem="qMk-At-DGx" firstAttribute="bottom" secondItem="lsU-fh-7gj" secondAttribute="bottom" id="nys-Lr-8gq"/>
+                            <constraint firstItem="lsU-fh-7gj" firstAttribute="leading" secondItem="qMk-At-DGx" secondAttribute="leading" id="op1-tA-1ZG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="qMk-At-DGx"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Applicants" id="Ycu-Go-YuO"/>
