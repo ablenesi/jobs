@@ -13,13 +13,13 @@ class JobsCreatedLogic: NSObject {
     func loadCreatedJobs(company : String) -> [JobCreatedDto] {
         var jobsCreatedByCompany = [JobCreatedDto]()
         
-        let job1 = JobCreatedDto(name: "Android Developer", dateOfCreation: "12 October 2018")
+        let job1 = JobCreatedDto(id: "1", name: "Android Developer", dateOfCreation: "12 October 2018")
         jobsCreatedByCompany.append(job1)
         
-        let job2 = JobCreatedDto(name: "HR Specialist", dateOfCreation: "20 July 2022")
+        let job2 = JobCreatedDto(id: "2", name: "HR Specialist", dateOfCreation: "20 July 2022")
         jobsCreatedByCompany.append(job2)
         
-        let job3 = JobCreatedDto(name: "JavaFX Developer", dateOfCreation: "20 August 2019")
+        let job3 = JobCreatedDto(id: "3", name: "JavaFX Developer", dateOfCreation: "20 August 2019")
         jobsCreatedByCompany.append(job3)
         
         return jobsCreatedByCompany

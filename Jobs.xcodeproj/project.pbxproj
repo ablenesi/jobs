@@ -27,6 +27,8 @@
 		52C3C4841FC337A2007DF5A5 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C3C4831FC337A2007DF5A5 /* Application.swift */; };
 		52C3C4861FC33BE8007DF5A5 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C3C4851FC33BE8007DF5A5 /* LoginController.swift */; };
 		6B13620D200AC84A004467D7 /* ApplicantsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B13620C200AC84A004467D7 /* ApplicantsController.swift */; };
+		6B13620F200BD19B004467D7 /* ApplicantsLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B13620E200BD19B004467D7 /* ApplicantsLogic.swift */; };
+		6B136211200BD23F004467D7 /* ApplicantDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B136210200BD23F004467D7 /* ApplicantDto.swift */; };
 		6B2640092005732600EF7B25 /* JobsCreatedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2640082005732500EF7B25 /* JobsCreatedController.swift */; };
 		6B28A011200A9981009C3584 /* NewJobCreationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B28A010200A9981009C3584 /* NewJobCreationController.swift */; };
 		6BA3E3E42003DD1E00DF215B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BA3E3E32003DD1E00DF215B /* GoogleService-Info.plist */; };
@@ -82,6 +84,8 @@
 		52C3C4831FC337A2007DF5A5 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		52C3C4851FC33BE8007DF5A5 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		6B13620C200AC84A004467D7 /* ApplicantsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicantsController.swift; sourceTree = "<group>"; };
+		6B13620E200BD19B004467D7 /* ApplicantsLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicantsLogic.swift; sourceTree = "<group>"; };
+		6B136210200BD23F004467D7 /* ApplicantDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicantDto.swift; sourceTree = "<group>"; };
 		6B2640082005732500EF7B25 /* JobsCreatedController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobsCreatedController.swift; sourceTree = "<group>"; };
 		6B28A010200A9981009C3584 /* NewJobCreationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewJobCreationController.swift; sourceTree = "<group>"; };
 		6BA3E3E32003DD1E00DF215B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Jobs/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -269,6 +273,8 @@
 			children = (
 				6BE88B2D2003EC9200A7C499 /* JobsCreatedLogic.swift */,
 				6BE88B2F2003EEE800A7C499 /* JobCreatedDto.swift */,
+				6B13620E200BD19B004467D7 /* ApplicantsLogic.swift */,
+				6B136210200BD23F004467D7 /* ApplicantDto.swift */,
 			);
 			path = humanResources;
 			sourceTree = "<group>";
@@ -617,12 +623,14 @@
 				6B13620D200AC84A004467D7 /* ApplicantsController.swift in Sources */,
 				52A7CCA21FB9F855000C65E4 /* AppDelegate.swift in Sources */,
 				52A7CCA41FB9F855000C65E4 /* FirstViewController.swift in Sources */,
+				6B136211200BD23F004467D7 /* ApplicantDto.swift in Sources */,
 				6BE88B302003EEE800A7C499 /* JobCreatedDto.swift in Sources */,
 				522873351FEDA1B600A83401 /* JobSearchViewController.swift in Sources */,
 				52C3C4821FC332F8007DF5A5 /* Job.swift in Sources */,
 				52C3C4861FC33BE8007DF5A5 /* LoginController.swift in Sources */,
 				6B2640092005732600EF7B25 /* JobsCreatedController.swift in Sources */,
 				52ADD3F11FE9B39D002B8840 /* KeychainManager.swift in Sources */,
+				6B13620F200BD19B004467D7 /* ApplicantsLogic.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

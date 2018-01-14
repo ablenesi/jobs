@@ -17,6 +17,9 @@ class CandidateTableViewCell: UITableViewCell {
 class ApplicantsController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var candidatesTableView: UITableView!
+    
+    var applicantsLogic = ApplicantsLogic()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,14 +36,16 @@ class ApplicantsController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return applicantsLogic.loadApplicants(company: "companyName").count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = candidatesTableView.dequeueReusableCell(withIdentifier: "CandidateCell", for: indexPath) as!CandidateTableViewCell
         
-        cell.candidateNameLabel?.text = "ddddd"
-        cell.desiredJobLabel?.text = "qqqqq"
+        var applicantsByCompany = applicantsLogic.loadApplicants(company: "companyName")
+        
+        cell.candidateNameLabel?.text = applicantsByCompany[indexPath.row].candidateName
+        cell.desiredJobLabel?.text = applicantsByCompany[indexPath.row].desiredPosition
         
         return cell
     }
