@@ -20,6 +20,8 @@ class CandidateProgressController: UIViewController, UITableViewDataSource, UITa
     
     @IBOutlet weak var candidateMilestoneTableView: UITableView!
     
+    var candidateProgressLogic = CandidateProgressLogic()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         candidateNameLabel.text = "Steven Schwenke"
@@ -36,13 +38,15 @@ class CandidateProgressController: UIViewController, UITableViewDataSource, UITa
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return candidateProgressLogic.loadMilestonesForCandidateAtPosition(userId: "", jobId: "").count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = candidateMilestoneTableView.dequeueReusableCell(withIdentifier: "candidateProgressMilestoneId", for: indexPath) as!CandidateProgressMilestoneViewCell
         
-        cell.milestoneNameLabel?.text = "HR Interview"
+        var milestonesForCandidate = candidateProgressLogic.loadMilestonesForCandidateAtPosition(userId: "", jobId: "")
+        
+        cell.milestoneNameLabel?.text = milestonesForCandidate[indexPath.row].milestoneName
         
         return cell
         
