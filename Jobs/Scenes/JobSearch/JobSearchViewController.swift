@@ -81,7 +81,7 @@ class JobTableViewCell: UITableViewCell {
     @IBOutlet private var title: UILabel!
     @IBOutlet weak var company: UILabel!
     @IBOutlet weak var createdAt: UILabel!
-    
+ 
     func populate(job: Job) {
         
         // Displaying data, part two
