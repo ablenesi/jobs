@@ -19,11 +19,14 @@ class JobSearchViewController: UITableViewController {
         var i = 0
         while i < 100 {
             let job = Job(
+                jobId: "1",
                 title: "Job \(i)",
                 description: "Description \(i)",
                 company: "Halcyon Mobile",
                 createdAt:NSDate(),
-                hrId: "1")
+                hrId: "1",
+                process: ["test step", "test step 2"],
+                isActive: true)
             items.append(job)
             i = i + 1
         }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		26C6C3649FDBA57416E59880 /* Pods_JobsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 101216836C971A4EA8D2B9D5 /* Pods_JobsUITests.framework */; };
+		520DACFB200D1B1A00416078 /* LocalCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520DACFA200D1B1A00416078 /* LocalCollection.swift */; };
 		521E86B61FE8288B00855D34 /* GoogleSignInService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521E86B51FE8288B00855D34 /* GoogleSignInService.swift */; };
 		521E86B91FE82D0500855D34 /* NSNotification.Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521E86B81FE82D0500855D34 /* NSNotification.Name.swift */; };
 		522873351FEDA1B600A83401 /* JobSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522873341FEDA1B600A83401 /* JobSearchViewController.swift */; };
@@ -62,6 +63,7 @@
 		101216836C971A4EA8D2B9D5 /* Pods_JobsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JobsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4804B51661032C5FC44ECCEF /* Pods_JobsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JobsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		503E68B1BD2F2D2FB8356EA6 /* Pods_Jobs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jobs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		520DACFA200D1B1A00416078 /* LocalCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCollection.swift; sourceTree = "<group>"; };
 		521E86B51FE8288B00855D34 /* GoogleSignInService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInService.swift; sourceTree = "<group>"; };
 		521E86B81FE82D0500855D34 /* NSNotification.Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotification.Name.swift; sourceTree = "<group>"; };
 		522873341FEDA1B600A83401 /* JobSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobSearchViewController.swift; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 				52A7CCAC1FB9F855000C65E4 /* LaunchScreen.storyboard */,
 				52A7CCAF1FB9F855000C65E4 /* Info.plist */,
 				527E7E1C2003D76900B44C29 /* hr.storyboard */,
+				520DACFA200D1B1A00416078 /* LocalCollection.swift */,
 			);
 			path = Jobs;
 			sourceTree = "<group>";
@@ -459,20 +462,34 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Jobs/Pods-Jobs-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -601,8 +618,8 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Jobs/Pods-Jobs-resources.sh",
-				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseAuthUI.bundle,
-				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseGoogleAuthUI.bundle,
+				"$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseAuthUI.bundle",
+				"$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseGoogleAuthUI.bundle",
 				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -624,6 +641,7 @@
 				6B49D368200C239400D203B7 /* CandidateProgressLogic.swift in Sources */,
 				52C3C4841FC337A2007DF5A5 /* Application.swift in Sources */,
 				52C3C4801FC3301F007DF5A5 /* User.swift in Sources */,
+				520DACFB200D1B1A00416078 /* LocalCollection.swift in Sources */,
 				52ADD3F31FE9B7E2002B8840 /* CurrentUser.swift in Sources */,
 				521E86B61FE8288B00855D34 /* GoogleSignInService.swift in Sources */,
 				52A7CCA61FB9F855000C65E4 /* ProfileViewController.swift in Sources */,

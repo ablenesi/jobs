@@ -32,4 +32,12 @@ class Application {
             self.date = date
         }
     }
+    
+    var dictionary: [String: Any] {
+        return [
+            "user": user.userId,
+            "job": job.jobId,
+            "process": process
+        ]
+    }
 }

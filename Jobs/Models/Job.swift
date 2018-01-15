@@ -7,23 +7,26 @@
 //
 import UIKit
 
-class Job {
+struct Job {
+    
+    var jobId: String
     var title : String
     var description : String
     var company : String
-    
     var createdAt : NSDate
     var hrId: String
-    public var process: [String]
+    var process: [String]
     var isActive : Bool
     
-    init(title : String, description : String, company : String, createdAt : NSDate,  hrId: String) {
-        self.title = title
-        self.description = description
-        self.company = company
-        self.createdAt = createdAt
-        self.hrId = hrId
-        self.process = [String]()
-        isActive = true
+    var dictionary: [String: Any]{
+        return[
+            "title": title,
+            "description": description,
+            "company": company,
+            "createdAt": createdAt.timeIntervalSince1970,
+            "hrId": hrId,
+            "process": process,
+            "isActive": isActive
+        ]
     }
 }

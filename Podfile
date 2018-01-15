@@ -7,6 +7,7 @@ target 'Jobs' do
 
   # Pods for Jobs
   pod 'Firebase/Core'
+  pod 'Firebase/Firestore'
   pod 'FirebaseUI/Google'
   pod 'KeychainSwift', '~> 10.0'
   pod 'Kingfisher', '~> 4.0'
