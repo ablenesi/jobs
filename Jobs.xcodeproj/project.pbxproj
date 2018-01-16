@@ -10,7 +10,6 @@
 		26C6C3649FDBA57416E59880 /* Pods_JobsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 101216836C971A4EA8D2B9D5 /* Pods_JobsUITests.framework */; };
 		521E86B61FE8288B00855D34 /* GoogleSignInService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521E86B51FE8288B00855D34 /* GoogleSignInService.swift */; };
 		521E86B91FE82D0500855D34 /* NSNotification.Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521E86B81FE82D0500855D34 /* NSNotification.Name.swift */; };
-		522873351FEDA1B600A83401 /* JobSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522873341FEDA1B600A83401 /* JobSearchViewController.swift */; };
 		527E7E1D2003D76900B44C29 /* hr.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 527E7E1C2003D76900B44C29 /* hr.storyboard */; };
 		52A7CCA21FB9F855000C65E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A7CCA11FB9F855000C65E4 /* AppDelegate.swift */; };
 		52A7CCA41FB9F855000C65E4 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A7CCA31FB9F855000C65E4 /* FirstViewController.swift */; };
@@ -64,7 +63,6 @@
 		503E68B1BD2F2D2FB8356EA6 /* Pods_Jobs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jobs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		521E86B51FE8288B00855D34 /* GoogleSignInService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInService.swift; sourceTree = "<group>"; };
 		521E86B81FE82D0500855D34 /* NSNotification.Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotification.Name.swift; sourceTree = "<group>"; };
-		522873341FEDA1B600A83401 /* JobSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobSearchViewController.swift; sourceTree = "<group>"; };
 		527E7E1C2003D76900B44C29 /* hr.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = hr.storyboard; sourceTree = "<group>"; };
 		52A7CC9E1FB9F855000C65E4 /* Jobs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jobs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52A7CCA11FB9F855000C65E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -153,7 +151,6 @@
 		522873331FEDA17800A83401 /* JobSearch */ = {
 			isa = PBXGroup;
 			children = (
-				522873341FEDA1B600A83401 /* JobSearchViewController.swift */,
 			);
 			path = JobSearch;
 			sourceTree = "<group>";
@@ -256,12 +253,20 @@
 		52ADD3F41FE9BCA8002B8840 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				6B140A52200E645C0093DDB4 /* jobSeeker */,
 				6BE88B292003E79800A7C499 /* humanResources */,
 				526A19281FF2AFBF00D18AFC /* Profile */,
 				522873331FEDA17800A83401 /* JobSearch */,
 				52C3C4851FC33BE8007DF5A5 /* LoginController.swift */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		6B140A52200E645C0093DDB4 /* jobSeeker */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = jobSeeker;
 			sourceTree = "<group>";
 		};
 		6BE88B292003E79800A7C499 /* humanResources */ = {
@@ -636,7 +641,6 @@
 				52A7CCA41FB9F855000C65E4 /* FirstViewController.swift in Sources */,
 				6B136211200BD23F004467D7 /* ApplicantDto.swift in Sources */,
 				6BE88B302003EEE800A7C499 /* JobCreatedDto.swift in Sources */,
-				522873351FEDA1B600A83401 /* JobSearchViewController.swift in Sources */,
 				6B136213200BD849004467D7 /* CandidateProgressController.swift in Sources */,
 				52C3C4821FC332F8007DF5A5 /* Job.swift in Sources */,
 				52C3C4861FC33BE8007DF5A5 /* LoginController.swift in Sources */,
