@@ -99,9 +99,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gEz-az-9RR">
-                                <rect key="frame" x="0.0" y="73" width="375" height="656"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gEz-az-9RR">
+                                <rect key="frame" x="0.0" y="69" width="375" height="660"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="jobsListCustomCellId" rowHeight="116" id="sMh-CN-dcq" customClass="JobOfferedTableViewCell" customModule="Jobs" customModuleProvider="target">
@@ -134,8 +133,23 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_bg" translatesAutoresizingMaskIntoConstraints="NO" id="mfR-4s-TRw">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="lDC-ds-QUy"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mfR-4s-TRw" firstAttribute="trailing" secondItem="33G-3g-xRS" secondAttribute="trailing" id="A6M-1T-Mdk"/>
+                            <constraint firstItem="gEz-az-9RR" firstAttribute="trailing" secondItem="33G-3g-xRS" secondAttribute="trailing" id="FXO-rd-E6c"/>
+                            <constraint firstItem="gEz-az-9RR" firstAttribute="top" secondItem="33G-3g-xRS" secondAttribute="top" constant="25" id="MdE-Vu-zAj"/>
+                            <constraint firstItem="gEz-az-9RR" firstAttribute="bottom" secondItem="33G-3g-xRS" secondAttribute="bottom" id="aTL-KD-RLv"/>
+                            <constraint firstItem="mfR-4s-TRw" firstAttribute="top" secondItem="S28-sJ-oLE" secondAttribute="top" id="b1B-HL-htj"/>
+                            <constraint firstItem="mfR-4s-TRw" firstAttribute="leading" secondItem="33G-3g-xRS" secondAttribute="leading" id="i54-Wi-Yah"/>
+                            <constraint firstItem="gEz-az-9RR" firstAttribute="leading" secondItem="33G-3g-xRS" secondAttribute="leading" id="lgN-0e-wlQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="33G-3g-xRS"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Job Search" id="ciu-FL-zns"/>
