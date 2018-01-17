@@ -48,4 +48,9 @@ class MyApplicationsViewController: UIViewController, UITableViewDataSource, UIT
         return cell
         
     }
+    
+    @IBAction func didUnwindFromMyApplicationProgressViewController(_ sender: UIStoryboardSegue) {
+        
+    }
+    
 }
