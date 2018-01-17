@@ -48,4 +48,9 @@ class JobsListViewController: UIViewController, UITableViewDataSource, UITableVi
         return cell
         
     }
+    
+    @IBAction func didUnwindFromApplicationViewController(_ sender: UIStoryboardSegue) {
+        
+    }
+    
 }
