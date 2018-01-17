@@ -10,6 +10,12 @@ import UIKit
 
 class ApplicationViewController: UIViewController {
 
+    @IBOutlet weak var jobNameLabel: UILabel!
+    
+    @IBOutlet weak var jobDescriptionTextView: UITextView!
+    
+    @IBOutlet weak var applyButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,4 +27,8 @@ class ApplicationViewController: UIViewController {
 
     }
 
+    @IBAction func applyButtonAction(_ sender: Any) {
+    
+    }
+    
 }
