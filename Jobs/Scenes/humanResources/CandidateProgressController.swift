@@ -51,4 +51,8 @@ class CandidateProgressController: UIViewController, UITableViewDataSource, UITa
         return cell
         
     }
+    
+    @IBAction func didUnwindFromMilestoneUpdateController(_ sender: UIStoryboardSegue) {
+    }
+    
 }
